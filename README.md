@@ -4,7 +4,7 @@ Pipeline automatizado que verifica, valida e ingere dados climáticos histórico
 
 ## Por que esse projeto
 
-Os outros dois projetos deste portfólio (previsão de churn e risco de ferrugem asiática da soja) demonstram ciência de dados aplicada: pegar um dataset e extrair valor preditivo dele. Este demonstra a etapa anterior, que normalmente é invisível: como um dataset confiável chega a existir e se mantém atualizado sem alguém baixando arquivo manualmente toda semana.
+Outros projetos deste portfólio demonstram ciência de dados aplicada: pegar um dataset e extrair valor preditivo dele. Este demonstra a etapa anterior, que normalmente é invisível: como um dataset confiável chega a existir e se mantém atualizado sem alguém baixando arquivo manualmente toda semana.
 
 ## Arquitetura
 
@@ -21,7 +21,7 @@ scripts/pipeline.py
         └── grava em data/clima_sorriso.parquet (versionado no próprio Git)
 ```
 
-Zero custo: sem AWS, sem servidor, sem cartão de crédito cadastrado em lugar nenhum. O GitHub Actions é gratuito e ilimitado para repositórios públicos, e é o que assume o papel de agendador (equivalente a um cron na nuvem).
+Optei por rodar isso via GitHub Actions em vez de AWS, o que mantém o projeto sem nenhum custo. A arquitetura equivalente em produção, usando os serviços que estudo para a certificação AWS Certified Data Engineer, está detalhada na seção "Como isso escalaria em produção".
 
 ## Decisões técnicas que valem registro
 
