@@ -73,9 +73,9 @@ def validar(df):
 def transformar(df):
     limpo = df.rename(columns={
         "D1N": "unidade_federacao",
-        "D2N": "produto",
+        "D2N": "variavel",
         "D3N": "ano",
-        "D4N": "variavel",
+        "D4N": "produto",
         "MN": "unidade_medida",
         "V": "valor",
     })[["unidade_federacao", "produto", "ano", "variavel", "unidade_medida", "valor"]]
