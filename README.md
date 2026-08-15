@@ -42,6 +42,18 @@ Optei por rodar isso via GitHub Actions em vez de AWS, o que mantém o projeto s
 
 Agendado para rodar toda segunda-feira às 6h UTC (3h em Brasília), via `.github/workflows/pipeline.yml`. Também pode ser disparado manualmente a qualquer momento pela aba Actions do GitHub (`workflow_dispatch`).
 
+## O dado em uso
+
+O pipeline entrega uma tabela (uma linha por estado, ano e métrica), formato ótimo pra máquina processar, mas pouco intuitivo pra olho humano. Os gráficos abaixo são um exemplo de consumo desse dataset, gerados a partir do próprio `producao_soja.parquet`, não fazem parte da automação, só mostram que o dado que chega no fim é realmente utilizável.
+
+![Produção por estado](producao_por_estado.png)
+
+Mato Grosso descola dos demais estados a partir de meados dos anos 2010 e se firma como o maior produtor do país, disparado.
+
+![Área plantada x produção](area_x_producao_brasil.png)
+
+A produção nacional cresce proporcionalmente mais que a área plantada ao longo do período, sinal de ganho de produtividade por hectare, não só expansão de fronteira agrícola.
+
 ## Limitações
 
 - A cadência semanal de verificação é uma escolha arbitrária; a tabela do IBGE é anual, então a maior parte das execuções não vai encontrar novidade, o que é esperado.
